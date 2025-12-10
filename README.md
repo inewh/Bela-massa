@@ -15,4 +15,5 @@ Este é o repositório para o site do "Bela Massa", um restaurante italiano fict
 
 ## 🚀 Como Executar
 
-Basta abrir o arquivo `index.html` em qualquer navegador web.
+
+Basta abrir `https://inewh.github.io/Bela-massa/` em qualquer navegador web.

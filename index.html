@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bela Massa - As melhores massas da região</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <a href="index.html" class="logo-link">
+        <img src="./images/logo.png.jpeg" alt="Bela Massa Logo" class="logo-image">
+        <span class="logo-text">Bela Massa</span>
+    </a>
+    <button class="hamburger-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav id="main-nav">
+        <ul>
+            <li><a href="index.html" id="inicio-link">Início</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="sobre.html" id="sobre-nos-link">Sobre Nós</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Bem-vindo à Bela Massa!</h1>
+    <p>Aqui você encontra as melhores massas da região.</p>
+
+    <section id="cardapio" class="menu-gallery">
+        <h2>Nosso Cardápio</h2>
+
+        <!-- PRATO DO DIA -->
+        <div class="prato-do-dia-container">
+            <div class="prato-do-dia-badge">Prato do Dia</div>
+            <div class="prato-do-dia-content">
+                <div class="prato-do-dia-image">
+                    <img src="./images/Lasanha-a-bolongnese.png.jpeg" alt="Lasanha à Bolonhesa, o prato do dia">
+                </div>
+                <div class="prato-do-dia-details">
+                    <h3>Lasanha à Bolonhesa</h3>
+                    <p class="prato-do-dia-description">Nossa clássica lasanha com camadas generosas de massa fresca, molho bolonhesa rico e queijo derretido, assada à perfeição. Uma receita de família que aquece o coração.</p>
+                    <span class="prato-do-dia-price">
+                        <span class="original-price">R$ 45,00</span>
+                        <span class="promo-price">R$ 39,90</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ENTRADAS -->
+        <h3 class="menu-category-title">Entradas</h3>
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img 
+                    src="./images/bruschetta.jpg.jpeg"
+                    loading="lazy"
+                    alt="Bruschetta Clássica">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Bruschetta Clássica</h3>
+                        <span class="price">R$ 25,00</span>
+                    </div>
+                    <p>Fatias de pão italiano tostado com tomate fresco, alho e azeite.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Minestrone.png.jpeg" loading="lazy" alt="Minestrone">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Minestrone</h3>
+                        <span class="price">R$ 30,00</span>
+                    </div>
+                    <p>Sopa italiana robusta com vegetais frescos, massa e feijão.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Arancini.png.jpeg" loading="lazy" alt="Arancini">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Arancini</h3>
+                        <span class="price">R$ 32,00</span>
+                    </div>
+                    <p>Bolinhos de arroz fritos recheados com ragu e queijo.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PRATOS PRINCIPAIS -->
+        <h3 class="menu-category-title">Pratos Principais</h3>
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="./images/Ravioli-de-Queijo.png.jpeg" loading="lazy" alt="Ravioli de queijo">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Ravioli de Queijo</h3>
+                        <span class="price">R$ 38,00</span>
+                    </div>
+                    <p>Massa recheada com queijos finos ao molho de manteiga e sálvia.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Gnocchi-ao-Pesto.png.jpeg" loading="lazy" alt="Gnocchi ao pesto">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Gnocchi ao Pesto</h3>
+                        <span class="price">R$ 39,00</span>
+                    </div>
+                    <p>Nhoque artesanal servido com molho pesto fresco.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Fettuccine-Alfredo.png.jpeg" loading="lazy" alt="Fettuccine Alfredo">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Fettuccine Alfredo</h3>
+                        <span class="price">R$ 40,00</span>
+                    </div>
+                    <p>Massa fresca com molho cremoso de parmesão.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Espaguete-Carbonara.png.jpeg" loading="lazy" alt="Carbonara">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Espaguete Carbonara</h3>
+                        <span class="price">R$ 42,00</span>
+                    </div>
+                    <p>Massa com pancetta, queijo pecorino e ovo.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Polenta-com-Ragu.jpeg" loading="lazy" alt="Polenta com ragu">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Polenta com Ragu</h3>
+                        <span class="price">R$ 44,00</span>
+                    </div>
+                    <p>Polenta cremosa coberta com ragu de linguiça toscana.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Lasanha-a-bolongnese.png.jpeg" loading="lazy" alt="Lasanha">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Lasanha à Bolonhesa</h3>
+                        <span class="price">R$ 45,00</span>
+                    </div>
+                    <p>Camadas de massa fresca, molho bolonhesa e queijo derretido.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Risotto-de-Cogumelos.jpeg" loading="lazy" alt="Risotto de cogumelos">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Risotto de Cogumelos</h3>
+                        <span class="price">R$ 48,00</span>
+                    </div>
+                    <p>Arroz arbóreo cremoso com mix de cogumelos frescos.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Saltimbocca.png.jpeg" loading="lazy" alt="Saltimbocca">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Saltimbocca</h3>
+                        <span class="price">R$ 55,00</span>
+                    </div>
+                    <p>Vitela com presunto cru e sálvia ao vinho branco.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- PIZZAS -->
+        <h3 class="menu-category-title">Pizzas</h3>
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="./images/Pizza-Margherita.png.jpeg" loading="lazy" alt="Pizza Margherita">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Pizza Margherita</h3>
+                        <span class="price">R$ 40,00</span>
+                    </div>
+                    <p>Molho de tomate, mussarela fresca e manjericão.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Pizza-Pepperoni.png.jpeg" loading="lazy" alt="Pizza Pepperoni">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Pizza Pepperoni</h3>
+                        <span class="price">R$ 45,00</span>
+                    </div>
+                    <p>Mussarela derretida com fatias de pepperoni picante.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Pizza-Quatro-Queijos.png.jpeg" loading="lazy" alt="Pizza Quatro Queijos">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Pizza Quatro Queijos</h3>
+                        <span class="price">R$ 48,00</span>
+                    </div>
+                    <p>Mussarela, provolone, parmesão e gorgonzola.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SOBREMESAS -->
+        <h3 class="menu-category-title">Sobremesas</h3>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="./images/Panna-Cotta.png.jpeg" loading="lazy" alt="Panna Cotta">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Panna Cotta</h3>
+                        <span class="price">R$ 26,00</span>
+                    </div>
+                    <p>Doce de creme com calda de frutas vermelhas.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Tiramisu.png.jpeg" loading="lazy" alt="Tiramisu">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Tiramisu</h3>
+                        <span class="price">R$ 28,00</span>
+                    </div>
+                    <p>Camadas de biscoito, café e creme de mascarpone.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BEBIDAS -->
+        <h3 class="menu-category-title">Bebidas</h3>
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="./images/agua.jpeg" loading="lazy" alt="Copo de água com gelo e limão">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Água</h3>
+                        <span class="price">R$ 6,00</span>
+                    </div>
+                    <p>Água mineral, disponível nas versões com e sem gás.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Refrigerante.png.jpeg" loading="lazy" alt="Copo de refrigerante com gelo e limão">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Refrigerante</h3>
+                        <span class="price">R$ 8,00</span>
+                    </div>
+                    <p>Latas variadas.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="./images/Suco-Natural.png.jpeg" loading="lazy" alt="Copo de suco de laranja natural">
+                <div class="item-details">
+                    <div class="item-header">
+                        <h3>Suco Natural</h3>
+                        <span class="price">R$ 12,00</span>
+                    </div>
+                    <p>Sucos feitos na hora.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Seção de Comentários -->
+    <section id="testimonials">
+        <h2>O que nossos clientes dizem</h2>
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"A melhor lasanha que já comi na vida! O ambiente é super aconchegante e o atendimento é de primeira. Com certeza virou meu restaurante italiano preferido."</p>
+                <span class="client-name">- Maria S.</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"A pizza de pepperoni é divina! Massa fina e crocante, no ponto certo. O sabor é autêntico. Recomendo a todos que amam uma boa pizza."</p>
+                <span class="client-name">- João P.</span>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p>"Atendimento impecável e o Tiramisu é de outro mundo. Dá pra sentir que os ingredientes são frescos e de qualidade. Voltarei sempre!"</p>
+                <span class="client-name">- Ana L.</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="contato">
+    <div class="contact-container">
+        <h2>Entre em Contato</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Nossas Informações</h3>
+                <p><i class="fa-solid fa-location-dot"></i> Via del Sapore, 42, Forno Felice, IT</p>
+                <p><i class="fa-solid fa-phone"></i> (00) 12345-6789</p>
+                <p><i class="fa-solid fa-envelope"></i> email.ficticio@belamassa.dev</p>
+                <h4>Horário de Funcionamento</h4>
+                <p>Terça a Domingo: 18:00 - 23:00</p>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5762.659997184281!2d10.39089195408235!3d43.72304687880103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5919e3a702951%3A0x1349178658331353!2sTorre%20de%20Pisa!5e0!3m2!1spt-BR!2sbr!4v1715713459492!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <form id="contact-form" class="contact-form" action="#" novalidate>
+                <p>Tem alguma dúvida? Nos envie uma mensagem!</p>
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Digite sua dúvida ou sugestão aqui..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+                <p id="form-status"></p>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/inewh" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>&copy; <span id="current-year"></span> Bela Massa. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<a href="#top" id="back-to-top-btn">
+    <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<!-- Tela de Carregamento -->
+<div id="loading-overlay">
+    <!-- Usando a imagem da pizza do cardápio para a animação -->
+    <img src="./images/car2.png" alt="Carregando..." class="pizza-loader">
+</div>
+
+<script src="./script.js"></script>
+
+</body>
+</html>

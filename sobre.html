@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nós - Bela Massa</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" class="logo-link">
+            <img src="./images/logo.png.jpeg" alt="Bela Massa Logo" class="logo-image">
+            <span class="logo-text">Bela Massa</span>
+        </a>
+
+        <button class="hamburger-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <nav id="main-nav" class="nav">
+            <ul>
+                <li><a href="index.html" id="inicio-link">Início</a></li>
+                <li><a href="index.html#cardapio">Cardápio</a></li>
+                <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+                <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Sobre a Bela Massa</h1>
+        <p>Conheça a história que deu sabor aos nossos pratos.</p>
+
+        <section class="about-section">
+            <div class="about-content">
+                <h2>Nossa História</h2>
+
+                <p>O Bela Massa nasceu muito antes de abrir suas portas. Ele começou como um sonho silencioso dentro de Lorenzo, um jovem que cresceu ajudando sua avó na cozinha, onde a mesa simples sempre foi um refúgio de amor e união.</p>
+
+                <p>Antes de falecer, sua avó deixou um caderno antigo, marcado por farinha, com uma única frase:</p>
+                <blockquote class="quote">“Se um dia faltar força, amasse a vida como se amassa a massa: com paciência, fé e vontade de seguir.”</blockquote>
+
+                <p>Lorenzo tentou abrir seu primeiro negócio aos 19 anos — e fracassou. Perdeu dinheiro, tempo e confiança. Mas não perdeu o sonho. Trabalhou como garçom, entregador e auxiliar de cozinha enquanto economizava cada centavo.</p>
+
+                <p>Com esforço e coragem, abriu seu primeiro espaço: pequeno, simples, mas cheio de propósito. E assim nasceu o <strong>Bela Massa</strong>.</p>
+
+                <p>Hoje, o restaurante é símbolo de superação, sabor e família. Cada prato é preparado com a mesma paixão que um dia começou na cozinha apertada de sua avó.</p>
+
+                <p><strong>Bela Massa — onde cada receita nasceu de coragem.</strong></p>
+            </div>
+
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop"
+                    alt="Interior do restaurante Bela Massa">
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <div class="contact-container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Nossas Informações</h3>
+                    <p><i class="fa-solid fa-location-dot"></i> Via del Sapore, 42, Forno Felice, IT</p>
+                    <p><i class="fa-solid fa-phone"></i> (00) 12345-6789</p>
+                    <p><i class="fa-solid fa-envelope"></i> email.ficticio@belamassa.dev</p>
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Terça a Domingo: 18:00 - 23:00</p>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5762.659997184281!2d10.39089195408235!3d43.72304687880103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d5919e3a702951%3A0x1349178658331353!2sTorre%20de%20Pisa!5e0!3m2!1spt-BR!2sbr!4v1715713459492!5m2!1spt-BR!2sbr" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <form id="contact-form" class="contact-form" action="#" novalidate>
+                    <p>Tem alguma dúvida? Nos envie uma mensagem!</p>
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Digite sua dúvida ou sugestão aqui..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Enviar</button>
+                    <p id="form-status"></p>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://github.com/inewh" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; <span id="current-year"></span> Bela Massa. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <a href="#top" id="back-to-top-btn"><i class="fa-solid fa-arrow-up"></i></a>
+
+    <!-- Tela de Carregamento -->
+    <div id="loading-overlay">
+        <!-- Usando a imagem da pizza do cardápio para a animação -->
+        <img src="./images/car2.png" alt="Carregando..." class="pizza-loader">
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

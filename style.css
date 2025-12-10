@@ -1,0 +1,732 @@
+/* Definindo variáveis de cor para fácil manutenção */
+:root {
+    /* Paleta de cores baseada no estilo de arte solicitado */
+    --bg-color: #097D4E;
+    --text-color: #D7F9D8; /* Tom Bege/Creme do Desenho */
+    --dot-color: rgba(215, 249, 216, 0.3); /* Cor dos pontos para o efeito halftone */
+}
+
+html {
+    scroll-behavior: smooth; /* Habilita a rolagem suave para links âncora */
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg-color);
+    margin: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+/* Classe para bloquear a rolagem quando o menu mobile estiver aberto */
+body.no-scroll {
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+p {
+    text-align: center;
+    font-size: 1.2em; /* Aumenta o tamanho do parágrafo */
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px 20px; /* Aumenta o espaçamento vertical */
+}
+
+header {
+    position: sticky;
+    top: 0; /* Define que ele deve grudar quando atingir o topo da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique sobre qualquer outro conteúdo */
+    display: flex;
+    justify-content: space-between; /* Alinha o logo à esquerda e a navegação à direita */
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 10px 40px; /* 10px de padding vertical, 40px horizontal */
+}
+
+.hamburger-menu {
+    display: none; /* Escondido por padrão em desktop */
+    background: none;
+    border: none;
+    font-size: 2em;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 1001; /* Acima da navegação para ser clicável */
+    padding: 0;
+}
+
+/* --- Estilos do Logo --- */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espaço entre o ícone e o texto */
+    text-decoration: none;
+    transition: opacity 0.3s ease; /* Adiciona transição suave de opacidade */
+}
+
+.logo-link:hover {
+    opacity: 0.8; /* Reduz a opacidade ao passar o mouse */
+}
+
+.logo-image {
+    height: 40px; /* Altura do logo */
+    width: auto;
+    /* Animação de glitch aplicada ao ícone também */
+    transition: transform 0.2s ease;
+}
+
+.hamburger-menu i {
+    transition: transform 0.3s ease;
+}
+.hamburger-menu i.fa-xmark {
+    transform: rotate(90deg); /* Pequena rotação para o 'X' */
+}
+
+/* Estilos para o texto do logo */
+.logo-text {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2em; /* Tamanho do texto do logo */
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+nav ul {
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 0; /* Remove o preenchimento padrão da lista */
+    margin: 0; /* Remove a margem padrão da lista */
+}
+
+/* Estilos para links de navegação em desktop */
+nav ul li {
+    display: inline-block; /* Faz com que os itens da lista fiquem lado a lado */
+    margin: 0 15px; /* Espaçamento entre os itens do menu */
+}
+
+nav ul li a {
+    padding: 5px 10px; /* Espaçamento interno dos links */
+    transition: none; /* Remove transição para um look mais "duro" */
+}
+
+nav ul li a:hover {
+    background-color: var(--text-color); /* Inverte as cores no hover */
+    color: var(--bg-color);
+}
+
+footer {
+    background-color: var(--bg-color);    
+    padding: 20px 0; /* Espaçamento interno (20px em cima/baixo, 0 nos lados) */
+}
+
+/* --- Seção de Contato --- */
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto 50px auto; /* Centraliza e adiciona espaço abaixo */
+    padding: 0 20px;
+}
+
+.contact-container h2 {
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 30px;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-info, .contact-form {
+    flex: 1;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.contact-info h4 {
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    text-align: left;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.map-container {
+    margin-top: 30px;
+    border: 2px solid var(--text-color);
+}
+.contact-form {
+    margin-top: 30px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid var(--text-color);
+    border-radius: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    transition: border-color 0.3s ease; /* Adiciona transição suave */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #fff; /* Muda a cor da borda ao focar */
+}
+
+.contact-form input.invalid,
+.contact-form textarea.invalid {
+    border-color: #ff6b6b; /* Vermelho para campos inválidos */
+}
+
+.contact-form .btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 2px solid var(--text-color);
+    border-radius: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form .btn-submit:hover {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+.contact-form .btn-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+.contact-form #form-status {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin: 50px auto 0 auto;
+    border-top: 1px solid rgba(215, 249, 216, 0.2);
+    padding-top: 30px;
+}
+.social-icons {
+    margin-bottom: 15px; /* Espaço entre os ícones e o texto de copyright */
+}
+
+.social-icons a {
+    color: var(--text-color);
+    font-size: 1.6em; /* Tamanho do ícone */
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    text-decoration: none; /* Remove o sublinhado */
+    transition: none;
+}
+
+.social-icons a:hover {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.menu-gallery {
+    background-color: var(--bg-color);
+    background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
+    background-size: 4px 4px;
+    padding: 50px 20px;
+    margin-top: 40px;
+}
+
+.menu-gallery h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+/* --- Seção Prato do Dia --- */
+.prato-do-dia-container {
+    max-width: 900px;
+    margin: 40px auto 60px auto; /* Espaçamento acima e abaixo */
+    padding: 25px;
+    border: 2px solid var(--text-color);
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.1); /* Fundo sutil para destacar */
+}
+
+.prato-do-dia-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 5px 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.prato-do-dia-content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.prato-do-dia-image {
+    flex: 0 0 40%; /* A imagem ocupa 40% do espaço */
+}
+
+.prato-do-dia-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.prato-do-dia-details {
+    flex: 1;
+}
+
+.prato-do-dia-details h3 {
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+.prato-do-dia-price {
+    display: block;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.prato-do-dia-price .original-price {
+    text-decoration: line-through;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.gallery-item img {
+    width: 120px; /* Largura fixa para a imagem */
+    height: 120px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+    border-radius: 0; /* Remove bordas arredondadas para um look mais duro */
+}
+
+.gallery-item:hover img {
+    transform: none; /* Remove efeito de hover */
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between; /* Coloca o nome à esquerda e o preço à direita */
+    align-items: baseline;
+    color: var(--text-color);
+}
+
+.item-header h3 {
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.item-details p {
+    text-align: left;
+    margin-top: 10px; /* Adiciona espaço entre o cabeçalho e a descrição */
+}
+
+.about-content {
+    flex: 1; /* Ocupa metade do espaço */
+}
+
+.about-content h2 {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    text-align: left;
+    position: relative; /* Necessário para o empilhamento com a imagem */
+    z-index: 2;
+}
+
+.about-content .quote {
+    font-style: italic;
+    font-size: 1.3rem;
+    margin: 30px 20px;
+    padding-left: 20px;
+    border-left: 4px solid var(--text-color);
+    opacity: 0.9;
+}
+
+.about-image {
+    flex: 1; /* Ocupa a outra metade */
+    position: relative;
+    z-index: 1;
+}
+.about-image img {
+    width: 100%;
+    border-radius: 0;
+    border: 2px solid var(--text-color);
+    box-shadow: -15px 15px 0px rgba(215, 249, 216, 0.2);
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--text-color);
+    outline: 6px solid var(--bg-color); /* Cria o efeito de borda dupla */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Ajusta o espaçamento */
+        flex-direction: row; /* Volta a ser linha para logo e hambúrguer */
+        align-items: center;
+        padding: 15px 20px;
+    }
+
+    .hamburger-menu {
+        display: block; /* Mostra o botão de hambúrguer em mobile */
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--bg-color); /* Fundo do menu móvel */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%); /* Esconde o menu fora da tela */
+        transition: transform 0.3s ease-in-out;
+        z-index: 999; /* Abaixo do botão de hambúrguer */
+    }
+
+    nav.nav-open {
+        transform: translateX(0); /* Mostra o menu */
+    }
+
+    nav ul {
+        padding: 20px;
+    }
+
+    /* Itens do Menu */
+    nav ul li {
+        display: block; /* Faz cada item do menu ocupar uma linha */
+        margin: 20px 0; /* Espaçamento vertical entre os itens */
+        text-align: center;
+    }
+
+    /* Títulos e Parágrafos */
+    h1 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem); /* Tipografia fluida */
+    }
+
+    h2 {
+        font-size: clamp(1.6rem, 7vw, 2.2rem); /* Tipografia fluida */
+    }
+
+    p {
+        font-size: clamp(1rem, 4.5vw, 1.2rem); /* Tipografia fluida */
+    }
+
+
+    .gallery-item {
+        display: flex;
+        flex-direction: column; /* Empilha a imagem e os detalhes */
+        align-items: center; /* Centraliza tudo */
+        gap: 15px; 
+        border-bottom: 2px solid var(--text-color);
+        padding-bottom: 20px;
+    }
+
+    .gallery-container {
+        display: flex;
+        flex-direction: column; /* Itens empilhados verticalmente */
+        gap: 25px; /* Espaço entre os itens da galeria */
+        margin: 0 auto; /* Centraliza o container */
+    }
+
+    /* Seção Sobre Nós */
+    .about-section {
+        flex-direction: column; /* Empilha o texto e a imagem */
+        text-align: center;
+    }
+
+    /* Prato do dia em mobile */
+    .prato-do-dia-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .prato-do-dia-details h3 {
+        font-size: 1.8rem;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* Estilo do cardápio para telas maiores (Desktop) */
+@media (min-width: 769px) {
+    .hamburger-menu { display: none; } /* Garante que o hambúrguer esteja escondido no desktop */
+    nav { display: block; } /* Garante que a navegação esteja visível no desktop */
+    .gallery-item {
+        flex-direction: column; 
+        background-color: transparent;
+        border: 2px solid var(--text-color);
+        border-radius: 0;
+        overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
+        height: 100%; /* Faz com que todos os cards tenham a mesma altura no grid */
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transição suave */
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-8px) scale(1.03); /* Eleva e aumenta o card */
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra para profundidade */
+    }
+
+    .gallery-item img {
+        width: 100%; /* Imagem ocupa toda a largura do card */
+        height: 180px; /* Altura fixa para todas as imagens */
+        object-fit: cover;
+        border-radius: 0; /* Remove o radius da imagem, pois o card já tem */
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid responsivo */
+        gap: 40px; /* Espaço entre os itens */
+        max-width: 1100px; /* Aumenta a largura máxima para acomodar as colunas */
+        margin: 0 auto; /* Centraliza */
+    }
+
+    .item-details {
+        padding: 20px; /* Adiciona espaçamento interno para o texto */
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* Faz esta área crescer para preencher o card */
+    }
+}
+
+#back-to-top-btn {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Posição fixa na tela */
+    bottom: 30px;
+    right: 30px;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    color: var(--bg-color);
+    border: 2px solid var(--bg-color);
+    border-radius: 0; /* Remove bordas arredondadas */
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: none;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#back-to-top-btn:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+
+.menu-category-title {
+    margin-top: 60px; /* Aumenta o espaço entre as categorias */
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--text-color);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+    text-align: center;
+    font-weight: 600;
+}
+
+/* --- Seção de Comentários (Testimonials) --- */
+#testimonials {
+    padding: 60px 20px;
+    background-color: var(--bg-color);
+}
+
+#testimonials h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--text-color);
+    padding: 25px;
+    flex-basis: 300px; /* Largura base de cada card */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.testimonial-card .stars {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.testimonial-card .client-name {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Regras de cor consolidadas para evitar redundância e garantir herança */
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input, textarea, button { /* Adicionado input, textarea, button para consistência */
+    color: var(--text-color);
+}
+
+/* --- Animação de Scan Line Retrô --- */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Dobro da altura para a animação de rolagem */
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 3px,
+        rgba(215, 249, 216, 0.08) 4px, /* Linha sutil na cor do texto */
+        rgba(215, 249, 216, 0.08) 5px
+    );
+    pointer-events: none; /* Garante que a camada não interfira com cliques */
+    z-index: 3000; /* Garante que fique acima de todo o conteúdo */
+    animation: scanline 12s linear infinite;
+}
+
+@keyframes scanline {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); } /* Move a camada para cima até a metade */
+}
+
+/* --- Tela de Carregamento (Loading Overlay) --- */
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    display: none; /* Escondido por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que fique acima de tudo */
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#loading-overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+.pizza-loader {
+    width: 150px;
+    height: 150px;
+    animation: fade-in-pizza 0.5s ease-out forwards;
+}
+
+#loading-overlay.hiding .pizza-loader {
+    animation: fade-out-pizza 0.5s ease-in forwards;
+}
+
+@keyframes fade-in-pizza {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out-pizza {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}

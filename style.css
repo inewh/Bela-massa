@@ -1,13 +1,13 @@
 /* Definindo variáveis de cor para fácil manutenção */
 :root {
-    /* Paleta de cores baseada no estilo de arte solicitado */
+   
     --bg-color: #097D4E;
-    --text-color: #D7F9D8; /* Tom Bege/Creme do Desenho */
-    --dot-color: rgba(215, 249, 216, 0.3); /* Cor dos pontos para o efeito halftone */
+    --text-color: #D7F9D8;
+    --dot-color: rgba(215, 249, 216, 0.3);
 }
 
 html {
-    scroll-behavior: smooth; /* Habilita a rolagem suave para links âncora */
+    scroll-behavior: smooth; 
     height: 100%;
 }
 
@@ -21,7 +21,7 @@ body {
     min-height: 100%;
 }
 
-/* Classe para bloquear a rolagem quando o menu mobile estiver aberto */
+
 body.no-scroll {
     overflow: hidden;
 }
@@ -33,41 +33,41 @@ h1 {
 
 p {
     text-align: center;
-    font-size: 1.2em; /* Aumenta o tamanho do parágrafo */
+    font-size: 1.2em; 
 }
 
 main {
     flex-grow: 1;
-    padding: 40px 20px; /* Aumenta o espaçamento vertical */
+    padding: 40px 20px;
 }
 
 header {
     position: sticky;
-    top: 0; /* Define que ele deve grudar quando atingir o topo da tela */
-    z-index: 1000; /* Garante que o cabeçalho fique sobre qualquer outro conteúdo */
+    top: 0;
+    z-index: 1000; 
     display: flex;
-    justify-content: space-between; /* Alinha o logo à esquerda e a navegação à direita */
+    justify-content: space-between; 
     align-items: center;
     background-color: var(--bg-color);
-    padding: 10px 40px; /* 10px de padding vertical, 40px horizontal */
+    padding: 10px 40px; 
 }
 
 .hamburger-menu {
-    display: none; /* Escondido por padrão em desktop */
+    display: none; 
     background: none;
     border: none;
     font-size: 2em;
     color: var(--text-color);
     cursor: pointer;
-    z-index: 1001; /* Acima da navegação para ser clicável */
+    z-index: 1001;
     padding: 0;
 }
 
-/* --- Estilos do Logo --- */
+
 .logo-link {
     display: flex;
     align-items: center;
-    gap: 12px; /* Espaço entre o ícone e o texto */
+    gap: 12px; /
     text-decoration: none;
     transition: opacity 0.3s ease; /* Adiciona transição suave de opacidade */
 }
@@ -197,17 +197,17 @@ footer {
     font-size: 1rem;
     box-sizing: border-box;
     background-color: transparent;
-    transition: border-color 0.3s ease; /* Adiciona transição suave */
+    transition: border-color 0.3s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #fff; /* Muda a cor da borda ao focar */
+    border-color: #fff; 
 }
 
 .contact-form input.invalid,
 .contact-form textarea.invalid {
-    border-color: #ff6b6b; /* Vermelho para campos inválidos */
+    border-color: #ff6b6b; 
 }
 
 .contact-form .btn-submit {
@@ -249,14 +249,14 @@ footer {
     padding-top: 30px;
 }
 .social-icons {
-    margin-bottom: 15px; /* Espaço entre os ícones e o texto de copyright */
+    margin-bottom: 15px; 
 }
 
 .social-icons a {
     color: var(--text-color);
-    font-size: 1.6em; /* Tamanho do ícone */
-    margin: 0 10px; /* Espaçamento entre os ícones */
-    text-decoration: none; /* Remove o sublinhado */
+    font-size: 1.6em; 
+    margin: 0 10px;
+    text-decoration: none; 
     transition: none;
 }
 
@@ -281,11 +281,11 @@ footer {
 /* --- Seção Prato do Dia --- */
 .prato-do-dia-container {
     max-width: 900px;
-    margin: 40px auto 60px auto; /* Espaçamento acima e abaixo */
+    margin: 40px auto 60px auto; 
     padding: 25px;
     border: 2px solid var(--text-color);
     position: relative;
-    background-color: rgba(0, 0, 0, 0.1); /* Fundo sutil para destacar */
+    background-color: rgba(0, 0, 0, 0.1); 
 }
 
 .prato-do-dia-badge {
@@ -309,7 +309,7 @@ footer {
 }
 
 .prato-do-dia-image {
-    flex: 0 0 40%; /* A imagem ocupa 40% do espaço */
+    flex: 0 0 40%; 
 }
 
 .prato-do-dia-image img {
@@ -342,19 +342,19 @@ footer {
 }
 
 .gallery-item img {
-    width: 120px; /* Largura fixa para a imagem */
-    height: 120px; /* Altura fixa para a imagem */
-    object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
-    border-radius: 0; /* Remove bordas arredondadas para um look mais duro */
+    width: 120px; 
+    height: 120px; 
+    object-fit: cover; 
+    border-radius: 0; 
 }
 
 .gallery-item:hover img {
-    transform: none; /* Remove efeito de hover */
+    transform: none; 
 }
 
 .item-header {
     display: flex;
-    justify-content: space-between; /* Coloca o nome à esquerda e o preço à direita */
+    justify-content: space-between; /
     align-items: baseline;
     color: var(--text-color);
 }
@@ -366,12 +366,11 @@ footer {
 
 .item-details p {
     text-align: left;
-    margin-top: 10px; /* Adiciona espaço entre o cabeçalho e a descrição */
+    margin-top: 10px; 
 }
 
 .about-content {
-    flex: 1; /* Ocupa metade do espaço */
-}
+    flex: 1; 
 
 .about-content h2 {
     text-align: left;
@@ -380,7 +379,7 @@ footer {
 
 .about-content p {
     text-align: left;
-    position: relative; /* Necessário para o empilhamento com a imagem */
+    position: relative;
     z-index: 2;
 }
 
@@ -394,7 +393,7 @@ footer {
 }
 
 .about-image {
-    flex: 1; /* Ocupa a outra metade */
+    flex: 1; 
     position: relative;
     z-index: 1;
 }
@@ -414,21 +413,21 @@ footer {
     padding: 40px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px solid var(--text-color);
-    outline: 6px solid var(--bg-color); /* Cria o efeito de borda dupla */
+    outline: 6px solid var(--bg-color); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* --- Media Queries para Responsividade --- */
 @media (max-width: 768px) {
     header {
-        justify-content: space-between; /* Ajusta o espaçamento */
-        flex-direction: row; /* Volta a ser linha para logo e hambúrguer */
+        justify-content: space-between; 
+        flex-direction: row; 
         align-items: center;
         padding: 15px 20px;
     }
 
     .hamburger-menu {
-        display: block; /* Mostra o botão de hambúrguer em mobile */
+        display: block; 
     }
 
     nav {
@@ -437,17 +436,17 @@ footer {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: var(--bg-color); /* Fundo do menu móvel */
+        background-color: var(--bg-color); 
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(100%); /* Esconde o menu fora da tela */
+        transform: translateX(100%); 
         transition: transform 0.3s ease-in-out;
-        z-index: 999; /* Abaixo do botão de hambúrguer */
+        z-index: 999; 
     }
 
     nav.nav-open {
-        transform: translateX(0); /* Mostra o menu */
+        transform: translateX(0); 
     }
 
     nav ul {
@@ -456,29 +455,29 @@ footer {
 
     /* Itens do Menu */
     nav ul li {
-        display: block; /* Faz cada item do menu ocupar uma linha */
-        margin: 20px 0; /* Espaçamento vertical entre os itens */
+        display: block; 
+        margin: 20px 0; 
         text-align: center;
     }
 
     /* Títulos e Parágrafos */
     h1 {
-        font-size: clamp(1.8rem, 8vw, 2.5rem); /* Tipografia fluida */
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
     }
 
     h2 {
-        font-size: clamp(1.6rem, 7vw, 2.2rem); /* Tipografia fluida */
+        font-size: clamp(1.6rem, 7vw, 2.2rem); 
     }
 
     p {
-        font-size: clamp(1rem, 4.5vw, 1.2rem); /* Tipografia fluida */
+        font-size: clamp(1rem, 4.5vw, 1.2rem); 
     }
 
 
     .gallery-item {
         display: flex;
-        flex-direction: column; /* Empilha a imagem e os detalhes */
-        align-items: center; /* Centraliza tudo */
+        flex-direction: column; 
+        align-items: center; 
         gap: 15px; 
         border-bottom: 2px solid var(--text-color);
         padding-bottom: 20px;
@@ -486,14 +485,14 @@ footer {
 
     .gallery-container {
         display: flex;
-        flex-direction: column; /* Itens empilhados verticalmente */
-        gap: 25px; /* Espaço entre os itens da galeria */
-        margin: 0 auto; /* Centraliza o container */
+        flex-direction: column; 
+        gap: 25px; 
+        margin: 0 auto; 
     }
 
     /* Seção Sobre Nós */
     .about-section {
-        flex-direction: column; /* Empilha o texto e a imagem */
+        flex-direction: column; 
         text-align: center;
     }
 
@@ -515,55 +514,55 @@ footer {
 
 /* Estilo do cardápio para telas maiores (Desktop) */
 @media (min-width: 769px) {
-    .hamburger-menu { display: none; } /* Garante que o hambúrguer esteja escondido no desktop */
-    nav { display: block; } /* Garante que a navegação esteja visível no desktop */
+    .hamburger-menu { display: none; } 
+    nav { display: block; } 
     .gallery-item {
         flex-direction: column; 
         background-color: transparent;
         border: 2px solid var(--text-color);
         border-radius: 0;
-        overflow: hidden; /* Garante que a imagem não ultrapasse as bordas arredondadas */
-        height: 100%; /* Faz com que todos os cards tenham a mesma altura no grid */
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adiciona transição suave */
+        overflow: hidden; 
+        height: 100%; 
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
     }
 
     .gallery-item:hover {
-        transform: translateY(-8px) scale(1.03); /* Eleva e aumenta o card */
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); /* Adiciona uma sombra para profundidade */
+        transform: translateY(-8px) scale(1.03); 
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25); 
     }
 
     .gallery-item img {
-        width: 100%; /* Imagem ocupa toda a largura do card */
-        height: 180px; /* Altura fixa para todas as imagens */
+        width: 100%;
+        height: 180px; 
         object-fit: cover;
-        border-radius: 0; /* Remove o radius da imagem, pois o card já tem */
+        border-radius: 0; 
     }
 
     .gallery-container {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Grid responsivo */
-        gap: 40px; /* Espaço entre os itens */
-        max-width: 1100px; /* Aumenta a largura máxima para acomodar as colunas */
-        margin: 0 auto; /* Centraliza */
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 40px; 
+        max-width: 1100px; 
+        margin: 0 auto; 
     }
 
     .item-details {
-        padding: 20px; /* Adiciona espaçamento interno para o texto */
+        padding: 20px; 
         display: flex;
         flex-direction: column;
-        flex-grow: 1; /* Faz esta área crescer para preencher o card */
+        flex-grow: 1; 
     }
 }
 
 #back-to-top-btn {
-    display: none; /* Escondido por padrão */
-    position: fixed; /* Posição fixa na tela */
+    display: none; 
+    position: fixed; 
     bottom: 30px;
     right: 30px;
-    z-index: 100; /* Garante que fique acima de outros elementos */
+    z-index: 100;
     color: var(--bg-color);
     border: 2px solid var(--bg-color);
-    border-radius: 0; /* Remove bordas arredondadas */
+    border-radius: 0; 
     width: 50px;
     height: 50px;
     font-size: 20px;
@@ -581,13 +580,13 @@ footer {
 }
 
 .menu-category-title {
-    margin-top: 60px; /* Aumenta o espaço entre as categorias */
+    margin-top: 60px; 
     margin-bottom: 30px;
     padding-bottom: 15px;
     border-bottom: 2px solid var(--text-color);
     font-size: 1.6rem;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+    letter-spacing: 2px; 
     text-align: center;
     font-weight: 600;
 }
@@ -616,7 +615,7 @@ footer {
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px solid var(--text-color);
     padding: 25px;
-    flex-basis: 300px; /* Largura base de cada card */
+    flex-basis: 300px; 
     flex-grow: 1;
     text-align: center;
 }
@@ -649,7 +648,7 @@ h3,
 h4,
 h5,
 h6,
-input, textarea, button { /* Adicionado input, textarea, button para consistência */
+input, textarea, button { 
     color: var(--text-color);
 }
 
@@ -660,22 +659,22 @@ body::after {
     top: 0;
     left: 0;
     width: 100%;
-    height: 200%; /* Dobro da altura para a animação de rolagem */
+    height: 200%; 
     background: repeating-linear-gradient(
         0deg,
         transparent,
         transparent 3px,
-        rgba(215, 249, 216, 0.08) 4px, /* Linha sutil na cor do texto */
+        rgba(215, 249, 216, 0.08) 4px,
         rgba(215, 249, 216, 0.08) 5px
     );
-    pointer-events: none; /* Garante que a camada não interfira com cliques */
-    z-index: 3000; /* Garante que fique acima de todo o conteúdo */
+    pointer-events: none; 
+    z-index: 3000; 
     animation: scanline 12s linear infinite;
 }
 
 @keyframes scanline {
     from { transform: translateY(0); }
-    to { transform: translateY(-50%); } /* Move a camada para cima até a metade */
+    to { transform: translateY(-50%); } 
 }
 
 /* --- Tela de Carregamento (Loading Overlay) --- */
@@ -686,10 +685,10 @@ body::after {
     width: 100%;
     height: 100%;
     background-color: var(--bg-color);
-    display: none; /* Escondido por padrão */
+    display: none; 
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Garante que fique acima de tudo */
+    z-index: 9999; 
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
@@ -729,4 +728,5 @@ body::after {
         transform: scale(0.5);
         opacity: 0;
     }
+
 }
